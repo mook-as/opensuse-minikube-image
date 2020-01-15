@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE kiwi [
-  <!ENTITY version "15.0">
-]>
-
 <image
   name="minikube-openSUSE"
   schemaversion="6.9"
@@ -80,15 +76,7 @@
     <package name="openSUSE-release"/>
     <package name="udev"/>
   </packages>
-  <!-- This is only available for Leap 15.1 and above
-  <repository type="rpm-md" alias="kiwi" priority="1">
-    <source path="obs://Virtualization:Appliances:Builder/openSUSE_Leap_&version;"/>
-  </repository>
-  -->
-  <repository type="rpm-md" imageinclude="true" alias="updates">
-    <source path="obs://openSUSE:Leap:&version;:Update/standard"/>
-  </repository>
-  <repository type="rpm-md" imageinclude="true" alias="oss">
-    <source path="obs://openSUSE:Leap:&version;/standard"/>
+  <repository type="rpm-md" imageinclude="true">
+    <source path="obsrepositories:/"/>
   </repository>
 </image>
